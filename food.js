@@ -23,20 +23,6 @@ class Food {
         this.y2 = y1 + height;
     }
 
-    isOverlapping(player) {
-        if (this.x1 <= player.x1 && player.x1 <= this.x2) {
-            if (this.y1 <= player.y1 && player.y1 <= this.y2) {
-                return true;
-            }
-        }
-        if (this.x1 <= player.x2 && player.x2 <= this.x2) {
-            if (this.y1 <= player.y2 && player.y2 <= this.y2) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     cook(cookAmount) {
         if (this.cookLevel > meatColors.length) return;
         this.cookLevel += cookAmount;
